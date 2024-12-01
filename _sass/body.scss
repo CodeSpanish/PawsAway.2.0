@@ -1,0 +1,22 @@
+// Root base overrides
+html {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+// Override container width
+body {
+  max-width: 960px; // Set your desired width
+  margin: 0 auto; // Center the container
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 769px) {
+  main.grid {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 0px;
+  }
+}

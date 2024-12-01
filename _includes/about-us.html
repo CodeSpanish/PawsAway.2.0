@@ -1,0 +1,6 @@
+<section class="about">
+  <img src="{{site.images_path}}PawsAway_logo.svg" alt="PawsAway logo" />
+  {% capture snippet_content %} {% include /snippets/about-us.md %} {%
+  endcapture %}
+    {{ snippet_content | markdownify }} 
+</section>

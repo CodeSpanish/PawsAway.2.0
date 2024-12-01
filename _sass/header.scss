@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  nav {
+    ul {
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    ul {
+      img {
+        max-height: 80px;
+      }
+    }
+  }
+}

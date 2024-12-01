@@ -1,0 +1,33 @@
+include:
+  - content
+  
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - .gitignore
+  - README.md
+  - content/snippets
+
+kramdown:
+  input: Kramdown
+  hard_wrap: false
+  syntax_highlighter: none
+  disable_indented_code_blocks: true
+
+# Global variables
+base_url: https://pawsaway.pet/
+favicon: "PawsAway.ico"
+favicon_apple: "PawsAway_ico.png"
+images_path: /assets/images/
+
+# Build settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-minifier
+
+sass:
+  sass_dir: _sass
+
+sass:
+  style: compressed

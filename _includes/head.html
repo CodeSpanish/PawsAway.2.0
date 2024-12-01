@@ -1,0 +1,57 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO meta tags -->
+  <title>{{page.title}}</title>
+  <meta
+    name="description"
+    content="{{page.description}}"
+  />
+  <meta name="author" content="{{page.author}}" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="{{page.title}}" />
+  <meta
+    property="og:description"
+    content="{{page.description}}"
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{site.base_url}}" />
+  <meta
+    property="og:image"
+    content="{{page.image}}"
+  />
+
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="{{page.image}}" />
+  <meta name="twitter:title" content="{{page.title}}" />
+  <meta
+    name="twitter:description"
+    content="{{page.description}}"
+  />
+  <meta
+    name="twitter:image"
+    content="{{page.image}}"
+  />
+
+  <!-- Canonical link -->
+  <link rel="canonical" href="{{site.base_url}}{{page.canonical}}" />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="/assets/images/{{site.favicon}}"
+    type="image/x-icon"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="{{site.images_path}}{{site.favicon_apple}}"
+  />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
