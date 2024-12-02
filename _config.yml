@@ -9,6 +9,11 @@ exclude:
   - README.md
   - content/snippets
 
+collections:
+  posts:
+    output: true
+    path: content/posts
+
 kramdown:
   input: Kramdown
   hard_wrap: false
