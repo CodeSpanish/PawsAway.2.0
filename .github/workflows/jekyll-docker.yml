@@ -18,15 +18,6 @@ jobs:
         run: |
           npm install
 
-      # Step to update Sass
-      - name: Update Sass
-        run: |
-          gem install sass-embedded --user-install
-          
-      # Configure GEM_HOME path (optional)
-      - name: Set up GEM_HOME
-        run: echo "$HOME/.gem/ruby/3.0.0/bin" >> $GITHUB_PATH
-
       # Step to build the site in the jekyll/builder container
       - name: Build the site in the jekyll/builder container
         run: |
