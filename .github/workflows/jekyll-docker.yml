@@ -2,31 +2,34 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    # Step to update npm packages
-    - name: Update npm packages
-      run: |
-        npm install
-        
-    # Step to update Sass
-    - name: Update Sass
-      run: |
-        gem install sass-embedded    
+      # Step to update npm packages
+      - name: Update npm packages
+        run: |
+          npm install
 
-    # Step to build the site in the jekyll/builder container
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      # Step to update Sass
+      - name: Update Sass
+        run: |
+          gem install sass-embedded --user-install
+          
+      # Configure GEM_HOME path (optional)
+      - name: Set up GEM_HOME
+        run: echo "$HOME/.gem/ruby/3.0.0/bin" >> $GITHUB_PATH
+
+      # Step to build the site in the jekyll/builder container
+      - name: Build the site in the jekyll/builder container
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
