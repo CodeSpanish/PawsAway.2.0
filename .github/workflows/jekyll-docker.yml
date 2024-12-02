@@ -8,24 +8,25 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    # Install Ruby and Jekyll dependencies
-    - name: Setup Ruby and Bundler
+    # Step to update npm packages
+    - name: Update npm packages
       run: |
-        sudo apt-get update
-        sudo apt-get install -y ruby-full build-essential zlib1g-dev
-        gem install bundler jekyll
-
-    # Install Dart Sass
-    - name: Install Dart Sass
-      run: gem install sass-embedded
-
-    # Install dependencies and build
-    - name: Build the site
+        npm install
+        
+    # Step to update Sass
+    - name: Update Sass
       run: |
-        bundle install
-        jekyll build --future
+        gem install sass-embedded    
+
+    # Step to build the site in the jekyll/builder container
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
