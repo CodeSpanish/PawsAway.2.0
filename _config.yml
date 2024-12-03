@@ -8,11 +8,7 @@ exclude:
   - .gitignore
   - README.md
   - content/snippets
-
-collections:
-  posts:
-    output: true
-    path: content/posts
+  - content/posts
 
 kramdown:
   input: Kramdown
