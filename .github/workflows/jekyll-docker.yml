@@ -24,7 +24,11 @@ jobs:
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "
-            chmod -R 777 /srv/jekyll &&
-            bundle install &&
-            bundle exec jekyll build --trace
-          "
+          chmod -R 777 /srv/jekyll &&
+          gem uninstall sass-embedded --executables --all &&
+          gem install sassc -v 2.4.0 &&
+          bundle install &&
+          export JEKYLL_SCSS_PROCESSOR=sassc &&
+          bundle exec jekyll build --trace
+        "
+
