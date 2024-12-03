@@ -19,9 +19,9 @@ jobs:
           npm install
 
       # Step to build the site in the jekyll/builder container
-        - name: Build the site in the jekyll/builder container
-          run: |
-            docker run \
+      - name: Build the site in the jekyll/builder container
+        run: |
+          docker run \
             -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
             jekyll/builder:latest /bin/bash -c "
               chmod -R 777 /srv/jekyll &&
