@@ -25,8 +25,10 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "
             chmod -R 777 /srv/jekyll &&
-            gem uninstall sass-embedded --executables --all &&
-            gem install sassc -v 2.4.0 &&
+            bundle config unset deployment &&
+            bundle config set force_ruby_platform true &&
+            echo 'gem \"sassc\", \"~> 2.4\"' >> Gemfile &&
+            sed -i '/sass-embedded/d' Gemfile &&
             bundle install &&
             export JEKYLL_SCSS_PROCESSOR=sassc &&
             bundle exec jekyll build --trace
