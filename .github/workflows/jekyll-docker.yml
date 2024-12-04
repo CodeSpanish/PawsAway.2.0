@@ -2,35 +2,25 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: ["master"]
+    branches: [ "master" ]
   pull_request:
-    branches: ["master"]
+    branches: [ "master" ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      # Step to update npm packages
-      - name: Update npm packages
-        run: |
-          npm install
-
-      - name: Build the site in the jekyll/builder container
-        run: |
-          docker run \
-            -v ${{ github.workspace }}:/srv/jekyll \
-            -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-            jekyll/builder:latest /bin/bash -c "
-              chmod -R 777 /srv/jekyll &&
-              # Explicitly remove sass-embedded gem if present
-              grep -v 'sass-embedded' Gemfile > Gemfile.temp &&
-              mv Gemfile.temp Gemfile &&
-              bundle config unset deployment &&
-              bundle config set force_ruby_platform true &&
-              bundle install &&
-              export JEKYLL_SCSS_PROCESSOR=sassc &&
-              bundle exec jekyll build --trace
-            "
+    # Step to update npm packages
+    - name: Update npm packages
+      run: |
+        npm install
+    # Step to build the site in the jekyll/builder container
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
