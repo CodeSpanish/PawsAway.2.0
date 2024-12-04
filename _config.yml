@@ -18,10 +18,12 @@ kramdown:
   disable_indented_code_blocks: true
 
 # Global variables
-base_url: https://pawsaway.pet/
+base_url: https://pawsaway.pet
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
-images_path: /assets/images/
+images_path: ./assets/images/
+images_posts_path: ../assets/images/posts/
+css_path: ./assets/css/styles.css
 
 # Build settings
 plugins:

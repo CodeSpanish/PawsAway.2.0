@@ -5,14 +5,14 @@
       <li>
         <a href="/" title="Home">
           <img
-            src="{{site.images_path}}PawsAway_logo_horizontal.svg"
+            src="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{ site.images_path }}PawsAway_logo_horizontal.svg"
             alt="{{page.title}}"
         /></a>
       </li>
     </ul>
     <ul>
-      <li><a href="/">Blog</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href="{% if page.layout == 'post' %}{{'..'}}{% endif %}/">Blog</a></li>
+      <li><a href="{% if page.layout == 'post' %}{{'..'}}{% endif %}/about">About</a></li>
     </ul>
   </nav>
 </header>

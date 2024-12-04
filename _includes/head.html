@@ -20,14 +20,14 @@
     content="{{page.description}}"
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{site.base_url}}" />
+  <meta property="og:url" content="{{site.base_url}}{{page.canonical}}" />
   <meta
     property="og:image"
-    content="{{page.image}}"
+    content="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{page.image}}"
   />
 
   <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="{{page.image}}" />
+  <meta name="twitter:card" content="{% if page.layout == 'post' %}{{'.'}}{% endif %}{page.image}}" />
   <meta name="twitter:title" content="{{page.title}}" />
   <meta
     name="twitter:description"
@@ -35,7 +35,7 @@
   />
   <meta
     name="twitter:image"
-    content="{{page.image}}"
+    content="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{page.image}}"
   />
 
   <!-- Canonical link -->
@@ -44,14 +44,14 @@
   <!-- Favicon -->
   <link
     rel="icon"
-    href="/assets/images/{{site.favicon}}"
+    href="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{site.favicon}}"
     type="image/x-icon"
   />
   <link
     rel="apple-touch-icon"
-    href="{{site.images_path}}{{site.favicon_apple}}"
+    href="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{site.favicon_apple}}"
   />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{site.css_path}}" />
 </head>

@@ -10,3 +10,4 @@ node_modules/
 # Ignore folders of content that is copied at build
 _posts/**/*.md
 _includes/snippets/**/*.md
+tmp/ 
