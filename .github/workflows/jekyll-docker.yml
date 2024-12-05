@@ -45,7 +45,12 @@ jobs:
               chmod -R 777 /srv/jekyll && \
               bundle config set path 'vendor/bundle' && \
               bundle install && \
+              npm install -g sass@^2.4 && \  # Install or upgrade Sass to 2.4 or above
               bundle exec jekyll build --future --baseurl \"${{ steps.pages.outputs.base_path }}\""
+              
+  env:
+    JEKYLL_ENV: production
+
 
         env:
           JEKYLL_ENV: production
