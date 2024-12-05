@@ -41,7 +41,12 @@ jobs:
         run: |
           docker run \
             -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-            jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build --future --baseurl \"${{ steps.pages.outputs.base_path }}\""
+            jekyll/builder:latest /bin/bash -c "\
+              chmod -R 777 /srv/jekyll && \
+              bundle config set path 'vendor/bundle' && \
+              bundle install && \
+              bundle exec jekyll build --future --baseurl \"${{ steps.pages.outputs.base_path }}\""
+
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
