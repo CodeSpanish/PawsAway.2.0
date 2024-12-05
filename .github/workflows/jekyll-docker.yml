@@ -49,7 +49,7 @@ jobs:
         run: |
           docker run \
             -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-            ghcr.io\codespanish\custom-jekyll-image /bin/bash -c "\
+            ghcr.io/codespanish/custom-jekyll-image /bin/bash -c "\
               chmod -R 777 /srv/jekyll && \
               bundle config set path 'vendor/bundle' && \
               bundle install && \
