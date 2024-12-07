@@ -1,17 +1,24 @@
 require 'fileutils'
 
 Jekyll::Hooks.register :site, :post_write do |site|
-  
-  # Directory to clean up .md files
-  target_dir = File.join(site.source, "_posts")
-  FileUtils.rm_rf(target_dir)
+  if site.config['serving']
+    Jekyll.logger.info "Post-Build: Skipping file removal for 'jekyll serve'"
+  else
+    Jekyll.logger.info "Post-Build: Performing cleanup"
 
-  Jekyll.logger.info "Post-Build: Removing .md files from #{target_dir}"
+    # Cleanup directories
+    cleanup_directory(site, "_posts")
+    cleanup_directory(site, "_includes/snippets")
+  end
+end
 
-  # Directory to clean up .md files
-  target_dir = File.join(site.source, "_includes/snippets")
-  FileUtils.rm_rf(target_dir)
+def cleanup_directory(site, relative_path)
+  target_dir = File.join(site.source, relative_path)
 
-  Jekyll.logger.info "Post-Build: Removing .md files from #{target_dir}"
-
+  if Dir.exist?(target_dir)
+    FileUtils.rm_rf(target_dir)
+    Jekyll.logger.info "Post-Build: Removed files from #{target_dir}"
+  else
+    Jekyll.logger.warn "Post-Build: Directory #{target_dir} does not exist. Skipping."
+  end
 end

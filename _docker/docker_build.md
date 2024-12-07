@@ -16,14 +16,7 @@ docker push ghcr.io/your-github-username/custom-jekyll-image:latest
 
 # Test the docker with
 
-docker run \
- -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-  your-docker-image:latest /bin/bash -c "\
-    chmod -R 777 /srv/jekyll && \
-    bundle config set path 'vendor/bundle' && \
-    bundle install && \
-    PATH=$PATH:/usr/local/bin && \
- bundle exec jekyll build --future --baseurl \"${{ steps.pages.outputs.base_path }}\""
+docker run -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site codespanish:latest /bin/bash -c chmod -R 777 /srv/jekyll && bundle config set path 'vendorbundle' &&bundle install && PATH=$PATH:/usr/local/bin && bundle exec jekyll build --future --baseurl \"${{ steps.pages.outputs.base_path }}\""
 
 # In the GitHub Action Yaml refer to the docker as below
 

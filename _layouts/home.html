@@ -7,17 +7,20 @@
     <main class="grid">
       <div>
         <h1>Latest Posts</h1>
-        <ul>
-          {% for post in site.posts %}
-          <li><h2><a href="{{site.base_url}}{{ post.url }}">{{ post.title }}</a></h2></li>
-          {% endfor %}       
-        </ul>
+        {% for post in site.posts %}
+          <article class="preview">
+            <img src="{{ site.images_posts_path }}{{post.image}}">
+            <h2><a href="{{site.base_url}}{{ post.url }}">{{ post.title }}</a></h2>
+            <a href="{{site.base_url}}{{ post.url }}"><button>View Post</button></a>
+          </article>
+          
+        {% endfor %}       
       </div>
       <div>{% include about-us.html %}</div>
     </main>
     {% include footer.html %}
 
     <!-- Scripts -->
-    <script src="{{site.base_url}}assets/script.js"></script>
+    <script src="{{site.base_url}}/assets/js/script.js"></script>
   </body>
 </html>

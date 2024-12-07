@@ -19,7 +19,7 @@ kramdown:
   disable_indented_code_blocks: true
 
 # Global variables
-base_url: https://github.com/CodeSpanish/pawsAway.2.0/
+base_url: .
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
 images_path: ./assets/images/
