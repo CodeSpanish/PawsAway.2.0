@@ -3,8 +3,7 @@ layout: post
 title: Apple AirTags for Pets – Are they safe?
 description: Learn about the use of Apple AirTags for pets. Explore alternatives for pet tracking and the potential risks and considerations associated with these devices.
 image: apple-airtags-for-pets.webp
-keywords: ["cat safety", "cat tracking", "dog safety", "dog trackig"]
-canonical: apple-airtags-for-pets-are-they-safe
+keywords: cat safety,cat tracking,dog safety,dog trackig
 permalink: blog/apple-airtags-for-pets-are-they-safe
 ---
 

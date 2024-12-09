@@ -1,5 +1,6 @@
 // Pico lightweight version
 @use "../node_modules/@picocss/pico/scss/pico" with (
+  $theme-color: "zinc",
   $enable-semantic-container: true,
   $enable-classes: true,
   $modules: (

@@ -4,7 +4,6 @@ title: PawsAway | About
 description: PawsAway is a website build by Pablo and Liz
 author: Pablo Matamoros
 image: Liz-and-Marco.webp
-canonical: /about
 permalink: /about
 ---
 

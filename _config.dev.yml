@@ -19,20 +19,31 @@ kramdown:
   disable_indented_code_blocks: true
 
 # Global variables
-base_url: .
+base_url: 
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
 images_path: ./assets/images/
 images_posts_path: ../assets/images/posts/
+images_posts_thumbnails_path: ../assets/images/posts-thumbnails/
 css_path: ./assets/css/styles.css
+paginate: 3
+paginate_path: "/blog/page:num/"
 
 # Build settings
 plugins:
   - jekyll-sitemap
   - jekyll-minifier
+  - jekyll-paginate
 
 sass:
   sass_dir: _sass
 
 sass:
   style: compressed
+
+# Variables for custom npm image processor
+image_processing:
+  source_dir: /assets/images/posts
+  output_dir: /assets/images/posts-thumbnails
+  thumbnail_width: 300
+  thumbnail_height: 200

@@ -26,4 +26,4 @@ bundle exec jekyll serve --config \_config.yml
 
 ### How to generate a local website for testing
 
-bundle exec jekyll serve --config \_config.dev.yml
+bundle exec jekyll build --config \_config.dev.yml

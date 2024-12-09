@@ -11,7 +11,7 @@ exclude:
   - README.md
   - content/snippets
   - content/posts
-
+  
 kramdown:
   input: Kramdown
   hard_wrap: false

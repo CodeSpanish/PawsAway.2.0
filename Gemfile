@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Specify the Jekyll version
-gem 'jekyll', '~> 4.3'
+gem 'jekyll', '~> 4'
 
 # Add Dart Sass support
 gem 'sassc', '~> 2.4'  # This ensures compatibility with Jekyll and Dart Sass
@@ -10,4 +10,5 @@ gem 'sassc', '~> 2.4'  # This ensures compatibility with Jekyll and Dart Sass
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-minifier'
+  gem 'jekyll-paginate'
 end

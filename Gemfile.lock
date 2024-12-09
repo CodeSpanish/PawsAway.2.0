@@ -14,7 +14,7 @@ GEM
     execjs (2.10.0)
     ffi (1.17.0-x64-mingw-ucrt)
     forwardable-extended (2.6.0)
-    google-protobuf (4.28.3-x64-mingw-ucrt)
+    google-protobuf (4.29.1-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
     htmlcompressor (0.4.0)
@@ -43,13 +43,14 @@ GEM
       jekyll (>= 3.5)
       json-minify (~> 0.0.3)
       uglifier (~> 4.1)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.8.2)
+    json (2.9.0)
     json-minify (0.0.3)
       json (> 0)
     kramdown (2.5.1)
@@ -71,7 +72,7 @@ GEM
     rexml (3.3.9)
     rouge (4.5.1)
     safe_yaml (1.0.5)
-    sass-embedded (1.81.0-x64-mingw-ucrt)
+    sass-embedded (1.82.0-x64-mingw-ucrt)
       google-protobuf (~> 4.28)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -80,14 +81,15 @@ GEM
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.6.0)
-    webrick (1.9.0)
+    webrick (1.9.1)
 
 PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  jekyll (~> 4.3)
+  jekyll (~> 4)
   jekyll-minifier
+  jekyll-paginate
   jekyll-sitemap
   sassc (~> 2.4)
 
