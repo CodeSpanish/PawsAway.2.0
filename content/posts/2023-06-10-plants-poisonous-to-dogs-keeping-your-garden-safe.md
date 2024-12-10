@@ -5,6 +5,7 @@ description: Make your garden safe for your dog. Discover in this post the top 1
 image: plants-poisonous-to-dogs.webp
 tags: dog safety, poisonous plants
 permalink: blog/10-plants-poisonous-to-dogs-keeping-your-garden-safe
+featured: true
 ---
 
 As pet owners, we cherish our dogs and want to keep them safe and healthy. While we may be well aware of the dangers posed by certain foods and household items, the potential hazards of plants often go unnoticed. In this post, we will identify ten plants poisonous to dogs.
