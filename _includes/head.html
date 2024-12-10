@@ -7,7 +7,7 @@
   <!-- SEO meta tags -->
   <title>{{page.title}}</title>
   <meta name="description" content="{{page.description}}"/>
-  <meta name="keywords" content="{{page.keywords}}">
+  <meta name="keywords" content="{{page.tags}}">
   <meta name="author" content="{{page.author}}" />
   <meta name="robots" content="index, follow" />
 
@@ -21,11 +21,11 @@
   <meta property="og:url" content="{{site.base_url}}{{page.permlink}}" />
   <meta
     property="og:image"
-    content="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{page.image}}"
+    content="{{site.base_url}}/assets/images/{{page.image}}"
   />
 
   <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{page.image}}" />
+  <meta name="twitter:card" content="{{site.base_url}}/assets/images/{{page.image}}" />
   <meta name="twitter:title" content="{{page.title}}" />
   <meta
     name="twitter:description"
@@ -33,7 +33,7 @@
   />
   <meta
     name="twitter:image"
-    content="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{page.image}}"
+    content="{{site.base_url}}/assets/images/{{page.image}}"
   />
 
   <!-- Canonical link -->
@@ -42,14 +42,14 @@
   <!-- Favicon -->
   <link
     rel="icon"
-    href="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{site.favicon}}"
+    href="{{site.base_url}}/assets/images/{{site.favicon}}"
     type="image/x-icon"
   />
   <link
     rel="apple-touch-icon"
-    href="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{site.favicon_apple}}"
+    href="{{site.base_url}}/assets/images/{{site.favicon_apple}}"
   />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{site.css_path}}" />
+  <link rel="stylesheet" href="{{site.base_url}}/assets/css/styles.css" />
 </head>

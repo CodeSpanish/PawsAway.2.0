@@ -1,5 +1,5 @@
 <section class="about">
-  <img src="{% if page.layout == 'post' %}{{'.'}}{% endif %}{{{site.images_path}}PawsAway_logo.svg" alt="PawsAway logo" />
+  <img src="{{site.base_url}}/assets//images/PawsAway_logo.svg" alt="PawsAway logo" />
   {% capture snippet_content %} {% include /snippets/about-us.md %} {%
   endcapture %}
     {{ snippet_content | markdownify }} 

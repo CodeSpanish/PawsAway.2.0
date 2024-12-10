@@ -5,6 +5,7 @@ require 'fileutils'
 Jekyll::Hooks.register :site, :post_write do |site|
   # Fetch configuration values
   config = site.config['image_processing'] || {}
+
   image_dir = File.join(site.source, config['source_dir'] ) # Default to 'images'
   output_dir = File.join(site.dest, config['output_dir'] ) # Default to 'images-thumbnails'
   thumbnail_width = config['thumbnail_width'] || 200 # Default size

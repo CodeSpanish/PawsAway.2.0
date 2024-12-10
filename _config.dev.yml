@@ -26,14 +26,12 @@ images_path: ./assets/images/
 images_posts_path: ../assets/images/posts/
 images_posts_thumbnails_path: ../assets/images/posts-thumbnails/
 css_path: ./assets/css/styles.css
-paginate: 3
-paginate_path: "/blog/page:num/"
 
 # Build settings
 plugins:
   - jekyll-sitemap
   - jekyll-minifier
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 sass:
   sass_dir: _sass
@@ -43,7 +41,21 @@ sass:
 
 # Variables for custom npm image processor
 image_processing:
-  source_dir: /assets/images/posts
-  output_dir: /assets/images/posts-thumbnails
+  source_dir: assets/images/posts 
+  output_dir: assets/images/posts-thumbnails
   thumbnail_width: 300
   thumbnail_height: 200
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  
+  # Specify multiple pagination paths
+  paginate_paths:
+    - '/blog/'
+    - '/'
