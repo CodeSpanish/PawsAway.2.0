@@ -11,7 +11,7 @@ exclude:
   - README.md
   - content/snippets
   - content/posts
-  
+
 kramdown:
   input: Kramdown
   hard_wrap: false
@@ -19,20 +19,43 @@ kramdown:
   disable_indented_code_blocks: true
 
 # Global variables
-base_url: https://github.com/CodeSpanish/pawsAway.2.0/
+base_url: https://github.com/CodeSpanish/PawsAway.2.0
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
-images_path: ./assets/images/
-images_posts_path: ../assets/images/posts/
-css_path: ./assets/css/styles.css
+images_path: /assets/images/
+images_posts_path: /assets/images/posts/
+images_posts_thumbnails_path: /assets/images/posts-thumbnails/
+css_path: /assets/css/styles.css
 
 # Build settings
 plugins:
   - jekyll-sitemap
   - jekyll-minifier
+  - jekyll-paginate-v2
 
 sass:
   sass_dir: _sass
 
 sass:
   style: compressed
+
+# Variables for custom npm image processor
+image_processing:
+  source_dir: assets/images/posts 
+  output_dir: assets/images/posts-thumbnails
+  thumbnail_width: 300
+  thumbnail_height: 200
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  
+  # Specify multiple pagination paths
+  paginate_paths:
+    - '/blog/'
+    - '/'
