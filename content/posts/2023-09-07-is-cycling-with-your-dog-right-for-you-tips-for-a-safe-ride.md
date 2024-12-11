@@ -1,12 +1,15 @@
 ---
 layout: post
 title: Is Cycling with Your Dog Right for You? Tips for a safe ride
+title_short: Is Cycling with Your Dog Right for You?
 description: Cycling with your dog can be fun, but some precautions are needed. This post discusses the pros and cons of riding with your dog and tips for a safe ride.
 image: cycling-with-your-dog.webp
 tags: dog entertained, dog excercise, dog safety
 permalink: blog/is-cycling-with-your-dog-right-for-you-tips-for-a-safe-ride
 featured: false
 ---
+
+# Is Cycling with Your Dog Right for You? Tips for a safe ride
 
 Cycling with your dog can be a fun activity. However, before you strap on that helmet and leash, it is essential to weigh the pros and cons to determine if cycling with your dog is a good idea.
 

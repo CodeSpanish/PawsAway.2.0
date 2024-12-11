@@ -1,12 +1,15 @@
 ---
 layout: post
 title: Leaving your cat alone at home - 10 valuable tips
+title_short: Leaving your cat alone at home
 description: In this blog post, we share valuable tips to make leaving your cat alone at home a positive experience for you and your pet.
 image: cat-alone-at-home.webp
 tags: cycling with your Dog,dog excercise
 permalink: blog/leaving-your-cat-alone-at-home-10-valuable-tips
 featured: true
 ---
+
+# Leaving your cat alone at home - 10 valuable tips
 
 Leaving your cat alone at home can be a stressful experience, both for you as a responsible owner and your beloved pet. However, with proper planning and preparation, you can ensure your cat stays safe, comfortable, and entertained during your absence. In this blog post, we’ll share valuable tips to help you navigate this situation and make leaving your cat alone at home a positive experience for everyone involved.
 

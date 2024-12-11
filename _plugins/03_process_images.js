@@ -37,7 +37,7 @@ fs.readdir(sourceDir, (err, files) => {
 
   files.forEach((file) => {
     const inputPath = path.join(sourceDir, file);
-    const outputPath = path.join(outputDir, `thumb-${file}`);
+    const outputPath = path.join(outputDir, file);
 
     // Check file extension to process only images
     if (/\.(jpe?g|png|webp|tiff|gif)$/i.test(file)) {

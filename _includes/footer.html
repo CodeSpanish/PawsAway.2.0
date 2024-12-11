@@ -1,4 +1,10 @@
+{% assign footer_links = site.pages | where: "footer", true %}
 <!-- Footer -->
 <footer>
+  <div>
+    {% for post in footer_links %}
+    <a href="{{ post.url }}" title="{{post.title}}"> {{post.title}} </a>
+    {% endfor %}
+  </div>
   <p>&copy; {{ site.time | date: "%Y" }} PawsAway. All rights reserved.</p>
 </footer>

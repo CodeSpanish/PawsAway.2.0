@@ -1,7 +1,9 @@
 <section>
+  {% if page.image %}
   <img
     src="{% if page.layout == 'post' %}{{ site.images_posts_path }}{% else %}{{ site.images_path }}{% endif %}{{ page.image }}"
     alt="{{page.title}}"
   />
+  {% endif %}
   {{content}}
 </section>

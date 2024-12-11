@@ -22,10 +22,10 @@ kramdown:
 base_url: 
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
-images_path: ./assets/images/
-images_posts_path: ../assets/images/posts/
-images_posts_thumbnails_path: ../assets/images/posts-thumbnails/
-css_path: ./assets/css/styles.css
+images_path: /assets/images/
+images_posts_path: /assets/images/posts/
+images_posts_thumbnails_path: /assets/images/posts-thumbnails/
+css_path: /assets/css/styles.css
 
 # Build settings
 plugins:

@@ -1,0 +1,1 @@
+This site is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. We are compensated for referring traffic and business to Amazon and other companies linked to on this site.

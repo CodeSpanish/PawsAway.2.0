@@ -1,0 +1,27 @@
+.featured {
+  img {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+    article {
+      margin-bottom: 0;
+    }
+  }
+
+  a:hover {
+    article {
+      footer {
+        background-color: grey;
+        h3 {
+          color: white;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}

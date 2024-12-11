@@ -1,6 +1,7 @@
 ---
 layout: your_layout
 title: your_title 
+title_short: short title to fir nicely in cards
 description: your_description
 image: your_image.webp
 tags: your_tag_1, your_tag_2

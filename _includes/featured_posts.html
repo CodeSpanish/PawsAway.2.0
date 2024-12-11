@@ -1,1 +1,14 @@
 {% assign featured_posts = site.posts | where: "featured", true | slice: 0, 3 %}
+<section class="grid featured">
+  {% for post in featured_posts %}
+  <a href="{{ post.url }}" title="{{ post.title_short | default: post.title }}">
+    <article>
+      <img
+        src="{{site.base_url}}{{site.images_posts_thumbnails_path}}{{post.image}}"
+        alt="{{post.title}}"
+      />
+      <footer><h3>{{ post.title_short | default: post.title }}</h3></footer>
+    </article>
+  </a>
+  {% endfor %}
+</section>
