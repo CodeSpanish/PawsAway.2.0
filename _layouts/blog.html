@@ -9,7 +9,7 @@
         <h1>Blog</h1>
         {% for post in paginator.posts %}
           <article class="preview">
-            <img src="{{site.images_posts_path}}{{post.image}}" alt="{{post.title}}">
+            <img src="{{site.base_url}}{{site.images_posts_path}}{{post.image}}" alt="{{post.title}}">
             <div>
             <h3><a href="{{site.base_url}}{{ post.url }}">{{ post.title }}</a></h2> 
             <p>{{post.description}}</p>        

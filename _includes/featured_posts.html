@@ -1,7 +1,7 @@
 {% assign featured_posts = site.posts | where: "featured", true | slice: 0, 3 %}
 <section class="grid featured">
   {% for post in featured_posts %}
-  <a href="{{ post.url }}" title="{{ post.title_short | default: post.title }}">
+  <a href="{{site.base_url}}{{ post.url }}" title="{{ post.title_short | default: post.title }}">
     <article>
       <img
         src="{{site.base_url}}{{site.images_posts_thumbnails_path}}{{post.image}}"
