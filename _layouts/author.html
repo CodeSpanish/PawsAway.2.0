@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <!-- Main content -->
+    <main class="grid">
+      <div>
+      {% include author.html %} 
+      </div>
+      <div>
+      {% include about-us.html %}
+      {% include legal-information.html %}
+      </div>
+    </main>
+    {% include footer.html %}
+
+    <!-- Scripts -->
+    <script src="{{site.base_url}}assets/js/script.js"></script>
+  </body>
+</html>

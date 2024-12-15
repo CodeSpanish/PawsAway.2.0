@@ -59,3 +59,5 @@ pagination:
   paginate_paths:
     - '/blog/'
     - '/'
+
+paginate_path: /page/:num/

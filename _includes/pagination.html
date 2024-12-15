@@ -9,9 +9,9 @@
       {% if page == paginator.page %}
         <em>{{ page }}</em>
       {% elsif page == 1 %}
-        <a href="{{ '/blog/' | relative_url }}">{{ page }}</a>
+        <a href="{{ page.layout == 'home' ? '/' : '/blog/' }}">{{page}}</a>  
       {% else %}
-        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
       {% endif %}
     {% endfor %}
   
@@ -20,3 +20,4 @@
     {% endif %}
   </div>
 {% endif %}
+{{site.base_url}}

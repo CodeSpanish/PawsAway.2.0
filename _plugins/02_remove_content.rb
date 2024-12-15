@@ -9,6 +9,8 @@ Jekyll::Hooks.register :site, :post_write do |site|
     # Cleanup directories
     cleanup_directory(site, "_posts")
     cleanup_directory(site, "_includes/snippets")
+    cleanup_directory(site, "_authors")
+
   end
 end
 
