@@ -2,22 +2,20 @@
 {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+      <a href="{{ paginator.previous_page_path }}">Previous</a>
     {% endif %}
   
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <em>{{ page }}</em>
-      {% elsif page == 1 %}
-        <a href="{{ page.layout == 'home' ? '/' : '/blog/' }}">{{page}}</a>  
+    {% for page_number in (1..paginator.total_pages) %}
+      {% if page_number == paginator.page %}
+        <em>{{ page_number }}</em>
+      {% elsif page_number == 1 %}
+        <a href="{{root_folder}}/">1</a>  
       {% else %}
-        <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
+        <a href="{{root_folder}}/{{ site.paginate_path | replace: ':num', page_number }}">{{page_number}}</a>
       {% endif %}
-    {% endfor %}
-  
+    {% endfor %}  
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+      <a href="{{root_folder}}/{{ paginator.next_page_path }}">Next</a>
     {% endif %}
   </div>
 {% endif %}
-{{site.base_url}}
