@@ -1,21 +1,20 @@
-<!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}">Previous</a>
     {% endif %}
-  
     {% for page_number in (1..paginator.total_pages) %}
       {% if page_number == paginator.page %}
         <em>{{ page_number }}</em>
       {% elsif page_number == 1 %}
-        <a href="{{root_folder}}/">1</a>  
+        <a href="{{ page.pagination['path'] | replace: '/page/:num', '' }}">1</a>
       {% else %}
-        <a href="{{root_folder}}/{{ site.paginate_path | replace: ':num', page_number }}">{{page_number}}</a>
+        <a href="{{ page.pagination['path'] | replace: ':num', page_number }}">{{ page_number }}</a>
       {% endif %}
-    {% endfor %}  
+    {% endfor %}
     {% if paginator.next_page %}
-      <a href="{{root_folder}}/{{ paginator.next_page_path }}">Next</a>
+      <a href="{{ paginator.next_page_path }}">Next</a>
     {% endif %}
   </div>
-{% endif %}
+  {% endif %}
+  

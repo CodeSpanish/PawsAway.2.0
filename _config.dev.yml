@@ -46,6 +46,7 @@ image_processing:
   thumbnail_width: 300
   thumbnail_height: 200
 
+# Pagination settings
 pagination:
   enabled: true
   per_page: 3
@@ -57,7 +58,7 @@ pagination:
   
   # Specify multiple pagination paths
   paginate_paths:
-    - '/blog/'
+    - '/blog'
     - '/'
 
-paginate_path: /page/:num/
+permalink: pretty
