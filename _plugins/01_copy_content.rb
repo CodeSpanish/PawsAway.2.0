@@ -1,33 +1,30 @@
 require 'fileutils'
-require 'fileutils'
+
+# Define a helper function to copy files from source to destination
+def copy_files(source_dir, dest_dir)
+  # Ensure the destination directory exists and clean it
+  FileUtils.rm_rf(dest_dir)
+  FileUtils.mkdir_p(dest_dir)
+
+  # Copy all files from the source to the destination
+  FileUtils.cp_r(Dir["#{source_dir}/*"], dest_dir)
+end
 
 Jekyll::Hooks.register :site, :after_init do |site|
+  Jekyll.logger.info "Pre-Build: Starting file copy operations"
 
-  # Copy snippets to _include
-  Jekyll.logger.info "Pre-Build: Copying snippets to _includes"
+  # Define the source and destination pairs
+  paths = [
+    { source: File.join(site.source, "content/snippets"), dest: File.join(site.source, "_includes/snippets") },
+    { source: File.join(site.source, "content/_authors"), dest: File.join(site.source, "_authors") },
+    { source: File.join(site.source, "content/posts"), dest: File.join(site.source, "_posts") }
+  ]
 
-  source_dir = File.join(site.source, "content/snippets")
-  dest_dir = File.join(site.source, "_includes/snippets")
+  # Loop through each pair and perform the copy operation
+  paths.each do |path|
+    Jekyll.logger.info "Pre-Build: Copying from #{path[:source]} to #{path[:dest]}"
+    copy_files(path[:source], path[:dest])
+  end
 
-  # Ensure the destination directory exists and clean it
-  FileUtils.rm_rf(dest_dir)
-  FileUtils.mkdir_p(dest_dir)
-
-  # Copy all files from the source to the destination
-  FileUtils.cp_r(Dir["#{source_dir}/*"], dest_dir)
-
-  # Copy content/posts to _posts
-  Jekyll.logger.info "Pre-Build: Copying content/posts to _posts"
-
-  source_dir = File.join(site.source, "content/posts")
-  dest_dir = File.join(site.source, "_posts")
-
-  # Ensure the destination directory exists and clean it
-  FileUtils.rm_rf(dest_dir)
-  FileUtils.mkdir_p(dest_dir)
-
-  # Copy all files from the source to the destination
-  FileUtils.cp_r(Dir["#{source_dir}/*"], dest_dir)
-
-  Jekyll.logger.info "Pre-Build: posts and snippets copied"
+  Jekyll.logger.info "Pre-Build: File copy operations completed"
 end

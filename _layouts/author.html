@@ -6,15 +6,16 @@
     <!-- Main content -->
     <main class="grid">
       <div>
-        <h1>Blog</h1>
-        {% include posts_list.html %}
-        {% include pagination.html %}  
+      {% include author.html %} 
       </div>
-      <div>{% include about-us.html %}</div>
+      <div>
+      {% include about-us.html %}
+      {% include legal-information.html %}
+      </div>
     </main>
     {% include footer.html %}
 
     <!-- Scripts -->
-    <script src="{{site.base_url}}/assets/js/script.js"></script>
+    <script src="{{site.base_url}}assets/js/script.js"></script>
   </body>
 </html>
