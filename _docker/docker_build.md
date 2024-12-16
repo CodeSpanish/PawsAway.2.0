@@ -1,3 +1,13 @@
+# Ensure packages are the latest version
+
+Ensure the files in this folder are the same as those in the root of the project
+
+Dockerfile
+Gemfile
+Gemfile.lock
+package.json
+package-lock.json
+
 # Login to docker
 
 docker login --username {{your_user_name}} --password {{your_personal_access_token}} ghcr.io
