@@ -5,7 +5,6 @@ title_short: Pet-Sitting Websites and Apps
 description: This post looks at the benefits of using pet-sitting websites and apps and provides you with some tips on how to find the right sitter for your furry friend.
 image: pet-sitting-websites.webp
 tags: pet sitting, pet sitting websites
-permalink: blog/pet-sitting-websites-and-apps-what-you-need-to-know
 featured: false
 ---
 

@@ -49,7 +49,7 @@ image_processing:
 # Pagination settings
 pagination:
   enabled: true
-  per_page: 3
+  per_page: 6
   permalink: '/page/:num/'
   title: ':title - Page :num'
   limit: 0
@@ -61,4 +61,4 @@ pagination:
     - '/blog'
     - '/'
 
-permalink: pretty
+permalink: /blog/:slug
