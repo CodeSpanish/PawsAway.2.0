@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
+<html lang="en" itemscope itemtype="https://schema.org/WebSite">
+{% include head.html %}
   <body>
     {% include header.html %}
     <!-- Main content -->
-    <main class="grid">
+    <main id="main-content" class="grid" role="main">
       <div>
-      {% include content.html %} 
+      {% include post_content.html %} 
       </div>
       <div>
       {% include about-us.html %}

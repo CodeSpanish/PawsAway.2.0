@@ -1,7 +1,7 @@
 include:
   - content
   - assets/css
-  
+
 exclude:
   - readme.md
   - node_modules
@@ -12,36 +12,38 @@ exclude:
   - content/snippets
   - content/posts
 
-kramdown:
-  input: Kramdown
-  hard_wrap: false
-  syntax_highlighter: none
-  disable_indented_code_blocks: true
-
 # Global variables
-base_url: 
+base_url:
+#base_url: https://pablomatamoros.com/PawsAway.2.0
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
 images_path: /assets/images/
 images_posts_path: /assets/images/posts/
 images_posts_thumbnails_path: /assets/images/posts-thumbnails/
 css_path: /assets/css/styles.css
+permalink: /blog/:slug
 
 # Build settings
 plugins:
   - jekyll-sitemap
-  - jekyll-minifier
   - jekyll-paginate-v2
+  - jekyll-minifier
 
+# Markdown processing
+kramdown:
+  input: Kramdown
+  hard_wrap: false
+  syntax_highlighter: none
+  disable_indented_code_blocks: true
+
+# SaSS configuration
 sass:
   sass_dir: _sass
-
-sass:
   style: compressed
 
 # Variables for custom npm image processor
 image_processing:
-  source_dir: assets/images/posts 
+  source_dir: assets/images/posts
   output_dir: assets/images/posts-thumbnails
   thumbnail_width: 300
   thumbnail_height: 200
@@ -50,15 +52,40 @@ image_processing:
 pagination:
   enabled: true
   per_page: 6
-  permalink: '/page/:num/'
-  title: ':title - Page :num'
+  permalink: "/page/:num/"
+  title: ":title - Page :num"
   limit: 0
-  sort_field: 'date'
+  sort_field: "date"
   sort_reverse: true
-  
+
   # Specify multiple pagination paths
   paginate_paths:
-    - '/blog'
-    - '/'
+    - "/blog"
+    - "/"
 
-permalink: /blog/:slug
+# Minfying settings
+jekyll-minifier:
+  preserve_php: true # Default: false
+  remove_spaces_inside_tags: true # Default: true
+  remove_multi_spaces: true # Default: true
+  remove_comments: true # Default: true
+  remove_intertag_spaces: true # Default: false
+  remove_quotes: false # Default: false
+  compress_css: true # Default: true
+  compress_javascript: true # Default: true
+  compress_json: true # Default: true
+  simple_doctype: false # Default: false
+  remove_script_attributes: false # Default: false
+  remove_style_attributes: false # Default: false
+  remove_link_attributes: false # Default: false
+  remove_form_attributes: false # Default: false
+  remove_input_attributes: false # Default: false
+  remove_javascript_protocol: false # Default: false
+  remove_http_protocol: false # Default: false
+  remove_https_protocol: false # Default: false
+  preserve_line_breaks: false # Default: false
+  simple_boolean_attributes: false # Default: false
+  compress_js_templates: false # Default: false
+  preserve_patterns: # Default: (empty)
+  uglifier_args:
+    harmony: true

@@ -1,10 +1,10 @@
 {% assign footer_links = site.pages | where: "footer", true %}
 <!-- Footer -->
-<footer>
-  <div>
+<footer role="contentinfo">
+  <nav aria-label="Legal links">
     {% for post in footer_links %}
     <a href="{{site.base_url}}{{ post.url }}" title="{{post.title}}"> {{post.title}} </a>
     {% endfor %}
-  </div>
-  <p>&copy; {{ site.time | date: "%Y" }} PawsAway. All rights reserved.</p>
+  </nav>
+  <p>&copy; <span id="current-year">{{ site.time | date: "%Y" }}</span> PawsAway. All rights reserved.</p>
 </footer>

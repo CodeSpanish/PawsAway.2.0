@@ -9,6 +9,6 @@ gem 'sassc', '~> 2.4'  # This ensures compatibility with Jekyll and Dart Sass
 # Gem plugins to use
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
-  gem 'jekyll-minifier'
   gem 'jekyll-paginate-v2'
+  gem 'jekyll-minifier'
 end

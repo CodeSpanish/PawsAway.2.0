@@ -1,0 +1,13 @@
+<article itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="datePublished" content="{{page.date}}">
+  <meta itemprop="description" content="{{page.description}}">
+  <meta itemprop="headline" content="{{page.title}}">
+  {% if page.image %}
+  <div class="hero">
+    <img itemprop="image" src="{{site.base_url}}{% if page.layout == 'post' %}{{ site.images_posts_path }}{% else %}{{ site.images_path }}{% endif %}{{ page.image }}" alt="{{page.title}}" width="785" height="523" loading="eager"/> 
+  </div>
+  {% endif %}
+  <div itemprop="articleBody">
+    {{content}}
+  </div>
+</article>

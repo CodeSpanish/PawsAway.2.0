@@ -1,13 +1,16 @@
 {% assign featured_posts = site.posts | where: "featured", true | slice: 0, 3 %}
-<section class="grid featured">
+<!-- Featured Posts Section -->
+<section class="grid featured" aria-label="Featured blog posts" itemscope itemtype="https://schema.org/Blog">
+  <meta itemprop="name" content="PawsAway Blog">
   {% for post in featured_posts %}
   <a href="{{site.base_url}}{{ post.url }}" title="{{ post.title_short | default: post.title }}">
-    <article>
-      <img
-        src="{{site.base_url}}{{site.images_posts_thumbnails_path}}{{post.image}}"
-        alt="{{post.title}}"
-      />
-      <footer><h3>{{ post.title_short | default: post.title }}</h3></footer>
+    <article itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="datePublished" content={{post.date}}>
+      <meta itemprop="author" content={{post.author}}>
+      <img itemprop="image" src="{{site.base_url}}{{site.images_posts_thumbnails_path}}{{post.image}}" alt="{{post.title}}" width="300" height="200" loading="eager"/>
+      <footer>
+        <h2 itemprop="headline">{{ post.title_short | default: post.title }}</h2>
+      </footer>
     </article>
   </a>
   {% endfor %}
