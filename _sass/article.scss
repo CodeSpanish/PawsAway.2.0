@@ -1,18 +1,38 @@
+article {
+  h1 {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+  }
+
+  h1,
+  h2,
+  strong {
+    font-weight: 600;
+  }
+}
+
 article.preview {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 0px;
-
-  h3 {
-    font-size: 1.1rem;
-    a {
-      text-decoration: none;
+  a:hover {
+    button {
+      color: #fff;
     }
+  }
+}
 
-    a:hover {
-      color: black;
+@media (max-width: 768px) {
+  article.preview {
+    h2 {
+      padding: 1rem 0 0;
     }
+  }
+}
+
+@media (min-width: 769px) {
+  article.preview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
   }
 }

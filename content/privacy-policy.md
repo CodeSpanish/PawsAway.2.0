@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Privacy Policy
-description:
+title: PawsAway | Privacy Policy
+title_short: Privacy Policy
+description: PawsAway Privacy Poly
 author: Pablo Matamoros
 permalink: /privacy-policy
 footer: true

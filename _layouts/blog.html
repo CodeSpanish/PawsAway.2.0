@@ -5,12 +5,8 @@
     {% include header.html %}
     <!-- Main content -->
     <main class="grid">
-      <div>
-        <h1>Blog</h1>
-        {% include posts_list.html %}
-        {% include pagination.html %}  
-      </div>
-      <div>{% include about-us.html %}</div>
+        {% include posts_list.html title="Blog" %}
+        {% include sidebar.html %}
     </main>
     {% include footer.html %}
 

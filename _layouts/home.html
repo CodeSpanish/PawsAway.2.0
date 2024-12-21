@@ -1,21 +1,14 @@
+{% assign featured_posts = site.posts | where: "featured", true | slice: 0, 3 %} 
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebSite">
-{% assign featured_posts = site.posts | where: "featured", true | slice: 0, 3 %}
   {% include head.html %}
   <body>
     {% include header.html %}
     <!-- Main content -->
     {% include featured_posts.html %}
     <main class="grid">
-      <div>
-        <h1>Recent Posts</h1>
-        {% include posts_list.html %}
-        {% include pagination.html %}
-      </div>
-      <aside role="complementary">
-        {% include about-us.html %}
-        {% include legal-information.html %}
-      </aside>
+      {% include posts_list.html title="Recent Post" %} 
+      {% include sidebar.html %}
     </main>
     {% include footer.html %}
     <!-- Scripts -->

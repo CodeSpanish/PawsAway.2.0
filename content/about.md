@@ -1,10 +1,12 @@
 ---
 layout: full-width
 title: PawsAway | About
+title_short: About
 description: PawsAway is a website build by Pablo and Liz
 author: Pablo Matamoros
 image: Liz-and-Marco.webp
 permalink: /about
+footer: true
 ---
 
 We are fortunate to live in a semi-rural area in the foothills of the beautiful Waitakere ranges in Auckland, New Zealand. Our house is surrounded by lush native bush, only 15 minutes from the rugged and windswept West Coast at Te Henga/Bethells Beach. We have our own chickens, cats and dogs, and a long list of furry friends lodging with us regularly. PawsAway is where we can share our experience with you.

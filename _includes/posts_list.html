@@ -1,4 +1,5 @@
-<div itemscope itemtype="https://schema.org/Blog">
+<div class="posts_list" itemscope itemtype="https://schema.org/Blog">
+  <h1>{{ include.title }}</h1>
   {% for post in paginator.posts %}
     <article class="preview" itemscope itemtype="https://schema.org/BlogPosting">
       <meta itemprop="datePublished" content="{{post.date}}">
@@ -13,4 +14,5 @@
       </div>
     </article>          
   {% endfor %}       
+  {% include pagination.html %}
 </div>

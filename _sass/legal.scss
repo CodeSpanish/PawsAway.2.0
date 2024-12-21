@@ -1,28 +1,8 @@
-.about {
+.legal {
   margin-bottom: var(--pico-block-spacing-vertical);
   padding: var(--pico-block-spacing-vertical)
     var(--pico-block-spacing-horizontal);
   border-radius: var(--pico-border-radius);
   background: var(--pico-card-background-color);
   box-shadow: var(--pico-card-box-shadow);
-
-  text-align: center;
-  img {
-    max-height: 140px;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    text-align: justify;
-  }
-}
-
-@media (min-width: 769px) {
-  .about {
-    @media (min-width: 769px) {
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
 }

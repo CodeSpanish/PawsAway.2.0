@@ -1,6 +1,6 @@
 // Root base overrides
 html {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -11,12 +11,32 @@ body {
   padding: 0 0.5rem;
 }
 
+// Colors and fonts global styles
+h2 {
+  font-size: 1.1rem;
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: black;
+  }
+}
+
+// Mobile view adjustments
+@media (max-width: 768px) {
+  main.grid {
+    padding: 1rem 0;
+  }
+}
+
+// Desktop
 @media (min-width: 769px) {
   main.grid {
     display: grid;
     grid-template-columns: 8fr 4fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 4rem;
+    grid-column-gap: 1rem;
     grid-row-gap: 0px;
   }
 }

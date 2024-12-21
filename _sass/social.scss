@@ -1,0 +1,34 @@
+/* Icons */
+:root,
+:host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-style-family-brands: "Font Awesome 6 Brands";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("/assets/fonts/fa-brands-400.woff2") format("woff2"),
+    url("/assets/fonts/fa-brands-400.ttf") format("truetype");
+}
+
+.fa-solid {
+  font-weight: 900;
+}
+
+.fa-brands {
+  font-weight: 900;
+}
+
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+
+.fa-x-twitter,
+.fa-facebook-f {
+  font-family: "Font Awesome 6 Brands";
+}

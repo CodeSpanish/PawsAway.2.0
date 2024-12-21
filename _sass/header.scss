@@ -1,18 +1,33 @@
-@media (max-width: 768px) {
+header {
   nav {
-    ul {
-      img {
-        max-height: 40px;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+
+    ul:last-child {
+      align-self: flex-end; /* Ensures this UL aligns to bottom */
+      margin-bottom: 0; /* Removes any bottom margin if needed */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    nav {
+      ul {
+        img {
+          max-height: 40px;
+        }
       }
     }
   }
 }
 
 @media (min-width: 769px) {
-  nav {
-    ul {
-      img {
-        max-height: 80px;
+  header {
+    nav {
+      ul {
+        img {
+          max-height: 80px;
+        }
       }
     }
   }

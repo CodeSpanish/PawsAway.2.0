@@ -3,7 +3,7 @@
 <footer role="contentinfo">
   <nav aria-label="Legal links">
     {% for post in footer_links %}
-    <a href="{{site.base_url}}{{ post.url }}" title="{{post.title}}"> {{post.title}} </a>
+    <a href="{{site.base_url}}{{ post.url }}" title="{{post.title_short}}"> {{post.title_short}} </a>
     {% endfor %}
   </nav>
   <p>&copy; <span id="current-year">{{ site.time | date: "%Y" }}</span> PawsAway. All rights reserved.</p>

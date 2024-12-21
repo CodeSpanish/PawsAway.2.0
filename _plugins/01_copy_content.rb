@@ -17,7 +17,8 @@ Jekyll::Hooks.register :site, :after_init do |site|
   paths = [
     { source: File.join(site.source, "content/snippets"), dest: File.join(site.source, "_includes/snippets") },
     { source: File.join(site.source, "content/_authors"), dest: File.join(site.source, "_authors") },
-    { source: File.join(site.source, "content/posts"), dest: File.join(site.source, "_posts") }
+    { source: File.join(site.source, "content/posts"), dest: File.join(site.source, "_posts") },
+    { source: File.join(site.source, "node_modules/@fortawesome/fontawesome-free/webfonts"), dest: File.join(site.source, "assets/fonts") }
   ]
 
   # Loop through each pair and perform the copy operation

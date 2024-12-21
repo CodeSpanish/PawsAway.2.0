@@ -1,6 +1,6 @@
 // Pico lightweight version
 @use "../node_modules/@picocss/pico/scss/pico" with (
-  $theme-color: "zinc",
+  $theme-color: "sand",
   $enable-semantic-container: true,
   $enable-classes: true,
   $modules: (
@@ -25,12 +25,11 @@
 
 @use "body";
 @use "header";
-@use "about";
-@use "content";
-@use "article";
 @use "featured";
-
-h2 {
-  font-size: 1rem;
-  font-weight: 500;
-}
+@use "posts_list";
+@use "article";
+@use "content";
+@use "legal";
+@use "about";
+@use "footer";
+@use "social";

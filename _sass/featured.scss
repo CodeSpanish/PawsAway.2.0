@@ -14,14 +14,18 @@
     article {
       footer {
         background-color: grey;
-        h3 {
+        h2 {
           color: white;
         }
       }
     }
   }
 
-  h3 {
+  h2 {
     font-size: 1rem;
+    // Shortens titles that are too long
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
