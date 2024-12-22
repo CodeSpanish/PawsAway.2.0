@@ -14,7 +14,7 @@ exclude:
 
 # Global variables
 #base_url:
-base_url: https://pablomatamoros.com/PawsAway.2.0
+base_url: https://pawsaway.pet
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
 images_path: /assets/images/
