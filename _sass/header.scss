@@ -6,6 +6,14 @@ header {
       align-self: flex-end; /* Ensures this UL aligns to bottom */
       margin-bottom: 0; /* Removes any bottom margin if needed */
     }
+
+    ul {
+      li {
+        a:hover {
+          text-underline-offset: 0.5rem;
+        }
+      }
+    }
   }
 }
 

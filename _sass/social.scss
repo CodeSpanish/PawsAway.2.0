@@ -16,19 +16,57 @@
     url("/assets/fonts/fa-brands-400.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/fa-solid-900.woff2") format("woff2"),
+    url("../fonts/fa-solid-900.ttf") format("truetype");
+}
+
 .fa-solid {
   font-weight: 900;
+  font-size: 1.5rem;
 }
 
 .fa-brands {
   font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.fa-cat::before {
+  content: "\f6be";
 }
 
 .fa-facebook-f:before {
   content: "\f39e";
 }
 
-.fa-x-twitter,
-.fa-facebook-f {
+.fa-square-facebook:before {
+  content: "\f082";
+}
+
+.fa-square-instagram:before {
+  content: "\e055";
+}
+
+.fa-square-x-twitter:before {
+  content: "\e61a";
+}
+
+.fa-paw::before {
+  content: "\f1b0";
+}
+
+.fa-facebook-f,
+.fa-square-facebook,
+.fa-square-instagram,
+.fa-square-x-twitter {
   font-family: "Font Awesome 6 Brands";
+}
+
+.fa-paw,
+.fa-cat {
+  font-family: "Font Awesome 6 Free";
 }
