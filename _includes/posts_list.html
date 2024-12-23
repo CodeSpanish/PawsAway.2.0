@@ -4,13 +4,13 @@
     <article class="preview" itemscope itemtype="https://schema.org/BlogPosting">
       <meta itemprop="datePublished" content="{{post.date}}">
       <meta itemprop="author" content="{{post.author}}">
-      <img itemprop="image" src="{{site.base_url}}{{site.images_posts_thumbnails_path}}{{post.image}}" alt="{{post.title}}"  width="300" height="200" loading="lazy">
+      <img itemprop="image" src="{{site.baseurl}}{{site.images_posts_thumbnails_path}}{{post.image}}" alt="{{post.title}}"  width="300" height="200" loading="lazy">
       <div>
         <h2 itemprop="headline">
-          <a itemprop="url" href="{{site.base_url}}{{ post.url }}">{{ post.title }}</a>
+          <a itemprop="url" href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
         </h2> 
         <p itemprop="description">{{post.description}}</p>        
-        <a href="{{site.base_url}}{{ post.url }}"><button>View Post</button></a>
+        <a href="{{site.baseurl}}{{ post.url }}"><button>View Post</button></a>
       </div>
     </article>          
   {% endfor %}       

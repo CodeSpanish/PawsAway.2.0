@@ -15,8 +15,8 @@
   <meta property="og:title" content="{{page.title}}" />
   <meta property="og:description"content="{{page.description}}"/>
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{site.base_url}}{{page.permlink}}" />
-  <meta property="og:image" content="{{site.base_url}}/assets/images/{{page.image}}"/>
+  <meta property="og:url" content="{{site.baseurl}}{{page.permlink}}" />
+  <meta property="og:image" content="{{site.baseurl}}/assets/images/{{page.image}}"/>
   <meta property="og:site_name" content="PawsAway">
   {% if page.layout == 'post' %}
   <meta property="article:published_time" content="{{page.date}}">
@@ -24,17 +24,17 @@
   {% endif %}
 
   <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="{{site.base_url}}/assets/images/{{page.image}}" />
+  <meta name="twitter:card" content="{{site.baseurl}}/assets/images/{{page.image}}" />
   <meta name="twitter:title" content="{{page.title}}" />
   <meta name="twitter:description" content="{{page.description}}" />
-  <meta name="twitter:image" content="{{site.base_url}}/assets/images/{{page.image}}" />
+  <meta name="twitter:image" content="{{site.baseurl}}/assets/images/{{page.image}}" />
 
   <!-- Canonical link -->
-  <link rel="canonical" href="{{site.base_url}}{{page.permalink}}" />
+  <link rel="canonical" href="{{site.baseurl}}{{page.permalink}}" />
 
   <!-- Favicon -->
-  <link rel="icon" href="{{site.base_url}}/assets/images/{{site.favicon}}" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="{{site.base_url}}/assets/images/{{site.favicon_apple}}" />
+  <link rel="icon" href="{{site.baseurl}}/assets/images/{{site.favicon}}" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="{{site.baseurl}}/assets/images/{{site.favicon_apple}}" />
 
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://www.facebook.com">
@@ -42,7 +42,7 @@
     <link rel="preconnect" href="https://www.instagram.com">
   
     <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{site.base_url}}/assets/css/styles.css" />
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css" />
 
   <!-- Schema.org markup -->
   <script type="application/ld+json">
@@ -51,7 +51,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "PawsAway",
-      "url": "{{site.base_url}}",
+      "url": "{{site.baseurl}}",
       "description": "Expert pet care advice and tips for responsible pet parents",
     }
     {% elsif page.layout =='post' %}
@@ -60,11 +60,11 @@
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{site.base_url}}{{page.permlink}}"
+        "@id": "{{site.baseurl}}{{page.permlink}}"
       },
       "headline": "{{page.title}}",
       "description": "{{page.description}}",
-      "image": "{{site.base_url}}/assets/images/posts/{{page.image}}",
+      "image": "{{site.baseurl}}/assets/images/posts/{{page.image}}",
       "author": {
         "@type": "Person",
         "name": "Pablo"
@@ -74,7 +74,7 @@
         "name": "PawsAway",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.base_url}}/assets/images/PawsAway_logo_horizontal.svg"
+          "url": "{{site.baseurl}}/assets/images/PawsAway_logo_horizontal.svg"
         }
       },
       "datePublished": "{{page.date}}"

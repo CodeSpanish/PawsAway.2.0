@@ -33,7 +33,7 @@ One of the most critical parts of planning a holiday with your dog is getting to
 
 Travelling via car is the easiest way to bring your dog along for a getaway. For one, your fur baby is closer, easier to monitor, and you’re in control of the stops. However, you must also ensure your dog is comfortable and safe in the car.
 
-Make sure you have items like a dog car seatbelt or harness. Consider putting your dog in a crate or carrier if it can’t sit still. Know more about how to prepare your dog for a road trip when you read our [safety tips when travelling with a dog in a car.]({{site.base_url}}/blog/10-tips-for-travelling-with-a-dog-in-a-car/)
+Make sure you have items like a dog car seatbelt or harness. Consider putting your dog in a crate or carrier if it can’t sit still. Know more about how to prepare your dog for a road trip when you read our [safety tips when travelling with a dog in a car.]({{site.baseurl}}/blog/10-tips-for-travelling-with-a-dog-in-a-car/)
 
 ### Plane
 

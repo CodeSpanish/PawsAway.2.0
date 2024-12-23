@@ -13,8 +13,9 @@ exclude:
   - content/posts
 
 # Global variables
-#base_url:
-base_url: https://pawsaway.pet
+#baseurl:
+url: https://pawsaway.pet
+baseurl:
 favicon: "PawsAway.ico"
 favicon_apple: "PawsAway_ico.png"
 images_path: /assets/images/

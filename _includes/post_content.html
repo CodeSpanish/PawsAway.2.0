@@ -4,7 +4,7 @@
   <meta itemprop="headline" content="{{page.title}}">
   {% if page.image %}
   <div class="hero">
-    <img itemprop="image" src="{{site.base_url}}{% if page.layout == 'post' %}{{ site.images_posts_path }}{% else %}{{ site.images_path }}{% endif %}{{ page.image }}" alt="{{page.title}}" width="785" height="523" loading="eager"/> 
+    <img itemprop="image" src="{{site.baseurl}}{% if page.layout == 'post' %}{{ site.images_posts_path }}{% else %}{{ site.images_path }}{% endif %}{{ page.image }}" alt="{{page.title}}" width="785" height="523" loading="eager"/> 
   </div>
   {% endif %}
   <div itemprop="articleBody">

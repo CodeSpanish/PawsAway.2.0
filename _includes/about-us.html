@@ -1,6 +1,6 @@
 <section class="about" itemscope itemtype="https://schema.org/Organization">
   <h2>About us</h2>
-  <img itemprop="logo" src="{{site.base_url}}/assets//images/PawsAway_logo.svg" alt="PawsAway logo" width="140" height="140"/>
+  <img itemprop="logo" src="{{site.baseurl}}/assets//images/PawsAway_logo.svg" alt="PawsAway logo" width="140" height="140"/>
   {% capture snippet_content %} {% include /snippets/about-us.md %} {%
   endcapture %}
     <p itemprop="description">{{ snippet_content}}</p> 
@@ -14,6 +14,6 @@
       <a href="https://www.instagram.com/elizabeth.dodd.designs/" rel="noopener noreferrer" itemprop="sameAs" aria-label="Follow us on Instagram">
         <span class="fa-brands fa-square-instagram">&ThickSpace;</span>
       </a>
-      <a href="{{site.base_url}}/about"><span class="fa-solide fa-paw">&ThickSpace;</span>About us</a>
+      <a href="{{site.baseurl}}/about"><span class="fa-solide fa-paw">&ThickSpace;</span>About us</a>
     </div>
 </section>

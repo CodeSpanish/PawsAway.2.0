@@ -1,7 +1,7 @@
 <section>
   {% if page.image %}
   <img
-    src="{{site.base_url}}{% if page.layout == 'post' %}{{ site.images_posts_path }}{% else %}{{ site.images_path }}{% endif %}{{ page.image }}"
+    src="{{site.baseurl}}{% if page.layout == 'post' %}{{ site.images_posts_path }}{% else %}{{ site.images_path }}{% endif %}{{ page.image }}"
     alt="{{page.title}}"
   />
   {% endif %}

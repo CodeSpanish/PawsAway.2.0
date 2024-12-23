@@ -1,19 +1,19 @@
 {% if paginator.total_pages > 1 %}
   <div class="pagination" role="navigation" aria-label="Pagination">
     {% if paginator.previous_page %}
-      <a href="{{site.base_url}}{{ paginator.previous_page_path }}" aria-label="Go to previous page">Previous</a>
+      <a href="{{site.baseurl}}{{ paginator.previous_page_path }}" aria-label="Go to previous page">Previous</a>
     {% endif %}
     {% for page_number in (1..paginator.total_pages) %}
       {% if page_number == paginator.page %}
         <span aria-current="page">{{ page_number }}</span>
       {% elsif page_number == 1 %}
-        <a href="{{site.base_url}}{{ page.pagination['path'] | replace: '/page/:num', '' }}" aria-label="Go to page 1">1</a>
+        <a href="{{site.baseurl}}{{ page.pagination['path'] | replace: '/page/:num', '' }}" aria-label="Go to page 1">1</a>
       {% else %}
-        <a href="{{site.base_url}}{{ page.pagination['path'] | replace: ':num', page_number }}" aria-label="Go to page {{page_number}}">{{ page_number }}</a>
+        <a href="{{site.baseurl}}{{ page.pagination['path'] | replace: ':num', page_number }}" aria-label="Go to page {{page_number}}">{{ page_number }}</a>
       {% endif %}
     {% endfor %}
     {% if paginator.next_page %}
-      <a href="{{site.base_url}}{{ paginator.next_page_path }}" aria-label="Go to next page">Next</a>
+      <a href="{{site.baseurl}}{{ paginator.next_page_path }}" aria-label="Go to next page">Next</a>
     {% endif %}
   </div>
   {% endif %}

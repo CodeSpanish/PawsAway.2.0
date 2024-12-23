@@ -82,6 +82,7 @@ GEM
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.6.0)
+    wdm (0.2.0)
     webrick (1.9.1)
 
 PLATFORMS
@@ -93,6 +94,7 @@ DEPENDENCIES
   jekyll-paginate-v2
   jekyll-sitemap
   sassc (~> 2.4)
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.5.23

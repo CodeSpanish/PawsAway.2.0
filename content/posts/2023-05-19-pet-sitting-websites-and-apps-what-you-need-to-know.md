@@ -24,9 +24,9 @@ The most common services offered on these platforms include:
 - **Dog walking.** A dog walker picks up your dog from your home for a walk.
 - **House sitting.** A house sitter stays at your home while you are away to care for your pets and keep an eye on your home.
 
-In our case, we started our journey with [Pawshake](https://www.pawshake.com/) just by chance while I was doing research for university (read more in our [About]({{site.base_url}}/about)). On my advice, my partner joined the platform as a pet sitter first, but soon after, we started using it regularly to find sitters for our pets. Since then, we have discovered other websites, but not all have a presence in New Zealand. So, we can recommend other very popular pet-sitting websites such as [Rover](http://rover.com/), [Wag!](https://wagwalking.com/) and [Trusted House Sitters](https://www.trustedhousesitters.com/).
+In our case, we started our journey with [Pawshake](https://www.pawshake.com/) just by chance while I was doing research for university (read more in our [About]({{site.baseurl}}/about)). On my advice, my partner joined the platform as a pet sitter first, but soon after, we started using it regularly to find sitters for our pets. Since then, we have discovered other websites, but not all have a presence in New Zealand. So, we can recommend other very popular pet-sitting websites such as [Rover](http://rover.com/), [Wag!](https://wagwalking.com/) and [Trusted House Sitters](https://www.trustedhousesitters.com/).
 
-Keep reading along to understand more from a pet owner’s perspective. For tips on how to start a pet business, check our post: [How to start a pet sitting business]({{site.base_url}}/blog/how-to-start-a-pet-sitting-business/)
+Keep reading along to understand more from a pet owner’s perspective. For tips on how to start a pet business, check our post: [How to start a pet sitting business]({{site.baseurl}}/blog/how-to-start-a-pet-sitting-business/)
 
 ## Benefits of Using Pet Sitting Websites and Apps
 
